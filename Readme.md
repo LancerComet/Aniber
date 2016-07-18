@@ -16,6 +16,10 @@ It's standalone and you can test anything you want to any site.
 2. Run `npm install` to get all dependencies.
 3. Run `npm run selenium-setup` to install selenium.
 
+### Something you may know ...
+1. You must have Java 7 or later version runtime installed, and make sure command "java" is available. (Configured in PATH)
+2. By default, Aniber will call **Firefox** up to run testing cases. You can change default setting "firefox" to "**chrome**" or "**intenet explorer**", but it will ask you to install `driver` to calling other explorer.
+You can check detail [here](http://nightwatchjs.org/) for a while, a setup-introduction is on the way.
 
 ### Write testing cases.
 1. Make a new **.js** file and save it to folder **./tests**. You can name this file what you want.
