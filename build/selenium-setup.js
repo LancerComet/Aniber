@@ -4,10 +4,9 @@
  *  ---
  *  Selenium 安装配置.
  */
- 
+
 const selenium = require('selenium-standalone')
 const seleniumConfig = require('./selenium-conf.js')
-
    selenium.install({
        version: seleniumConfig.selenium.version,
        baseURL: seleniumConfig.selenium.baseURL,
@@ -15,6 +14,6 @@ const seleniumConfig = require('./selenium-conf.js')
        logger: function (message) { console.log(message) },
        progressCb: function (totalLength, progressLength, chunkLength) {}
    }, function (err) {
-       if (err) throw new Error(`Selenium 安装错误: ${err}`)
-       console.log('Selenium 安装完成.')
+       if (err) throw new Error(`Error occurred during installation Selenium: ${err}`)
+       console.log('Installation finished.')
    })

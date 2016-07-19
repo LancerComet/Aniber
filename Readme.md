@@ -19,12 +19,12 @@ It's standalone and you can test anything you want to any site.
 ### Something you may know ...
 1. You must have Java 7 or later version runtime installed, and make sure command "java" is available. (Configured in PATH)
 2. By default, Aniber will call **Firefox** up to run testing cases. You can change default setting "firefox" to "**chrome**" or "**intenet explorer**", but it will ask you to install `driver` to calling other explorer.
-You can check detail [here](http://nightwatchjs.org/) for a while, a setup-introduction is on the way.
+You can check detail [here](http://nightwatchjs.org/guide#selenium-settings) for a while, a setup-introduction is on the way.
 
 ### Write testing cases.
 1. Make a new **.js** file and save it to folder **./tests**. You can name this file what you want.
 2. Write testing code.
-> You may want to check the [documents](http://nightwatchjs.org/) about how to write testing case and using APIs.
+> You may want to check the [documents](http://nightwatchjs.org/guide#unit-testing) about how to write testing case and using APIs.
 
   Here is an example.
   ```
@@ -33,7 +33,7 @@ You can check detail [here](http://nightwatchjs.org/) for a while, a setup-intro
       password: 'password',
       uid: 10000
   }
-  module.exports = {  
+  module.exports = {
       'Bilibili Live Login Test': function (client) {
         client.url('http://live.bilibili.com').maximizeWindow()
 
@@ -95,21 +95,25 @@ Run `npm start` to run your testing cases.
  - `npm start`: Run all testing cases.
  - `npm run selenium-setup`: Install Selenium to your project.
  - `npm run selenium-start`: Startup Selenium manually.
+ - `npm run lint`: Run ESLint manually.
 
 ## File Structure
 ```
 >
-|-  build                     
+|-  build
 |     |- selenium-conf.js     # Selenium and Driver configuration.
 |     |- selenium-setup.js    # Selenium setup function.
-|     └- selenium-start.js    # Selenium startup function.
+|     |- selenium-start.js    # Selenium startup function.
 |
 |-  reports                   # Testing report.
 |-  tests                     # Testing cases.
 |
+|-  .editorconfig             # Editor Config file to override your editor. You can change or delete it if you hate it :)
+|-  .eslintignore             # ESLint ignoring list. Put everyting that you don't want it to be checked by ESLint here.
+|-  .eslintrc.js              # ESLint configuration.
 |-  nightwatch.json           # Nightwatch configuration file.
 |-  nightwatch.conf.js        # Nightwatch configuration file.
 |-  package.json              # Project configuration.
 |-  Readme.md                 # Introduction.
-└-  startup.js                # Entry file, to start app.
+|-  startup.js                # Entry file. To call up app.
 ```
