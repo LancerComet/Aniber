@@ -1,17 +1,26 @@
 {
-  "name": "Aniber",
+  "name": "aniber",
   "version": "0.1.0",
-  "description": "",
+  "description": "A web e2e testing toolkit.",
   "main": "index.js",
   "scripts": {
     "start": "node ./startup.js",
+    "lint": "eslint .",
     "selenium-setup": "node ./build/selenium-setup.js",
     "selenium-start": "node ./build/selenium-start.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "e2e",
+    "testing",
+    "web"
+  ],
+  "author": "LancerComet <chw644@hotmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-standard": "^2.0.0",
     "nightwatch": "^0.9.5",
     "selenium-standalone": "^5.5.0"
   }
