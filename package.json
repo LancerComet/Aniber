@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./startup.js",
+    "ie": "node ./startup.js --ie",
+    "firefox": "node ./startup.js --firefox",
+    "chrome": "node ./startup.js --chrome",
+    "phantomjs": "node ./startup.js --phantomjs",
     "lint": "eslint .",
     "selenium-setup": "node ./build/selenium-setup.js",
     "selenium-start": "node ./build/selenium-start.js"
@@ -23,5 +27,8 @@
     "eslint-plugin-standard": "^2.0.0",
     "nightwatch": "^0.9.5",
     "selenium-standalone": "^5.5.0"
+  },
+  "dependencies": {
+    "phantomjs-prebuilt": "^2.1.7"
   }
 }

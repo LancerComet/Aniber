@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="1">
+
+  <testsuite name="demo"
+    errors="1" failures="1" hostname="" id="" package="demo" skipped="0"
+    tests="1" time="95.87" timestamp="Sat, 23 Jul 2016 18:39:39 GMT">
+  
+    <testcase name="Find the answer." time="95.87" assertions="3">
+
+    
+
+      <failure message="Expected element &lt;body&gt; to be present - element was not found">    at Object.module.exports.Find the answer. (G:\DevArea\Aniber\tests\demo.js:31:19)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)</failure>
+
+    
+    </testcase>
+      <system-err>
+        ERROR: Unable to locate element: &quot;#sb_form_go&quot; using: css selector
+    at Object.module.exports.Find the answer. (G:\DevArea\Aniber\tests\demo.js:27:12)
+    at Module.call (G:\DevArea\Aniber\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at G:\DevArea\Aniber\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (G:\DevArea\Aniber\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (G:\DevArea\Aniber\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (G:\DevArea\Aniber\node_modules\q\q.js:796:13)
+    at G:\DevArea\Aniber\node_modules\q\q.js:556:49
+    at runSingle (G:\DevArea\Aniber\node_modules\q\q.js:137:13)
+    at flush (G:\DevArea\Aniber\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>

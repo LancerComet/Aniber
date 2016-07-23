@@ -17,9 +17,8 @@ It's standalone and you can test anything you want to any site.
 3. Run `npm run selenium-setup` to install selenium.
 
 ### Something you may know ...
-1. You must have Java 7 or later version runtime installed, and make sure command "java" is available. (Configured in PATH)
-2. By default, Aniber will call **Firefox** up to run testing cases. You can change default setting "firefox" to "**chrome**" or "**intenet explorer**", but it will ask you to install `driver` to calling other explorer.
-You can check detail [here](http://nightwatchjs.org/guide#selenium-settings) for a while, a setup-introduction is on the way.
+- You must have Java 7 or later version runtime installed, and make sure command "java" is available. (Configured in PATH)
+- By default, Aniber will call **Phantomjs** up to run testing cases, but it allows you to use **Internet Explorer**, **Firefox** and **Chrome**. See the NPM Scripts command below.
 
 ### Write testing cases.
 1. Make a new **.js** file and save it to folder **./tests**. You can name this file what you want.
@@ -90,12 +89,21 @@ You can check detail [here](http://nightwatchjs.org/guide#selenium-settings) for
 
 ### Run your test.
 Run `npm start` to run your testing cases.
+If you want use a different browser, see the commands below.
 
 ## NPM Scripts
- - `npm start`: Run all testing cases.
+ - `npm start`: Run all testing cases by using default settings. It will use **Phantomjs** to run testing cases.
+ - `npm run ie`: Run all testing cases by using **Internet Explorer**. You might do some extra work. Check these stuff below.
+ - `npm run firefox`: Run all testing cases by using **Firefox**. Make sure Firefox has been installed.
+ - `npm run chrome`: Run all testing case by using **Chrome**. Make sure Chrome has been installed.
  - `npm run selenium-setup`: Install Selenium to your project.
  - `npm run selenium-start`: Startup Selenium manually.
- - `npm run lint`: Run ESLint manually.
+ - `npm run lint`: Run ESLint manually. It will only check project configuration files.
+
+## For Internet Explorer user
+You must do something extra:
+ - Tune off "Enhanced Protected Mode" in Internet Explorer "Option -> Security" panel for each level if you are using IE 10 and higher.
+ - Set your "Zoom Level" to 100%.
 
 ## File Structure
 ```

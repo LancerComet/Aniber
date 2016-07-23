@@ -11,7 +11,7 @@ const seleniumConfig = require('./selenium-conf.js')
 selenium.start({
   drivers: seleniumConfig.driver
 }, (err, child) => {
-  if (err) throw new Error(`Selenium 启动失败: ${err}`)
-  console.log(`Selenium 已手工启动，进程 PID: ${child.pid}`)
-  console.log('当不再需要运行 Selenium 时可关闭此 PID 进程.')
+  if (err) throw new Error(`Selenium 启动失败 | Selenium startup failed: ${err}`)
+  console.log(`Selenium has been started，the PID: ${child.pid}`)
+  console.log('If you don\'t need Selenium anymore, just kill the process with this PID.')
 })
