@@ -42,3 +42,6 @@ jspm_packages
 
 # Visual Studio Code Config.
 .vscode/
+
+# Reports folder.
+reports/
