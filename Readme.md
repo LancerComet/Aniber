@@ -6,7 +6,7 @@
 is an e2e testing tool presets powered by Selenium and Nightwatch.
 It's standalone and you can test anything you want to any site.
 
-![](https://raw.githubusercontent.com/LancerComet/Aniber/master/preview.gif)
+![](https://raw.githubusercontent.com/LancerComet/Aniber/master/assets/preview.gif)
 
 
 ## Get started
