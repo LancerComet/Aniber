@@ -7,7 +7,7 @@
 module.exports = {
   'Find the answer.': function (client) {
     /*
-     *  In this case, we will open bing.com and search "what is microsoft" and take a screenshot to save our answers..
+     *  In this case, we will open bing.com and search "what is microsoft" and take a screenshot to save our answers.
      */
 
     const searchInput = '#sb_form_q'
@@ -31,6 +31,5 @@ module.exports = {
     client.expect.element('body').to.be.present
     client.saveScreenshot('reports/answers.png')  // Take a screenshot and save to "reports/answer.png".
     client.end()
-
   }
 }

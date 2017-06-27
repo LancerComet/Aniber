@@ -4,20 +4,25 @@
   "description": "A web e2e testing toolkit.",
   "main": "index.js",
   "scripts": {
-    "start": "node ./startup.js",
-    "ie": "node ./startup.js --ie",
-    "firefox": "node ./startup.js --firefox",
-    "chrome": "node ./startup.js --chrome",
-    "phantomjs": "node ./startup.js --phantomjs",
+    "start": "node ./bin/startup.js",
+    "ie": "node ./bin/startup.js --ie",
+    "edge": "node ./bin/startup.js --edge",
+    "firefox": "node ./bin/startup.js --firefox",
+    "chrome": "node ./bin/startup.js --chrome",
+    "phantomjs": "node ./bin/startup.js --phantomjs",
     "lint": "eslint .",
-    "selenium-setup": "node ./build/selenium-setup.js",
-    "selenium-start": "node ./build/selenium-start.js"
+    "selenium-setup": "node ./bin/selenium-setup.js",
+    "selenium-start": "node ./bin/selenium-start.js"
   },
   "keywords": [
     "e2e",
     "testing",
     "web"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LancerComet/Aniber.git"
+  },
   "author": "LancerComet <chw644@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
