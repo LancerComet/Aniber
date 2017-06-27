@@ -9,24 +9,21 @@
 const process = require('process')
 
 module.exports = {
-  // Check latest version here | 请在下方链接查询最新版本:
-  // https://selenium-release.storage.googleapis.com/index.html
+  // Check latest version here: https://selenium-release.storage.googleapis.com/index.html
   selenium: {
-    version: '2.53.1',
+    version: '3.4.0',
     baseURL: 'https://selenium-release.storage.googleapis.com'
   },
   driver: {
     chrome: {
-      // Check latest version here |请在下方链接查询最新版本:
-      // https://chromedriver.storage.googleapis.com/index.html
-      version: '2.22',
+      // Check latest version here: https://chromedriver.storage.googleapis.com/index.html
+      version: '2.30',
       arch: process.arch,
       baseURL: 'https://chromedriver.storage.googleapis.com'
     },
     ie: {
-      // Check latest version here |请在下方链接查询最新版本:
-      // https://selenium-release.storage.googleapis.com/index.html
-      version: '2.53.1',
+      // Check latest version here: https://selenium-release.storage.googleapis.com/index.html
+      version: '3.4.0',
       arch: process.arch,
       baseURL: 'https://selenium-release.storage.googleapis.com'
     }
