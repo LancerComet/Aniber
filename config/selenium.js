@@ -13,6 +13,12 @@ module.exports = {
   },
 
   driver: {
+    firefox: {
+      version: '0.17.0',
+      arch: process.arch,
+      baseURL: 'https://github.com/mozilla/geckodriver/releases/download'
+    },
+
     chrome: {
       // Check latest version here: https://chromedriver.storage.googleapis.com/index.html
       version: '2.30',
@@ -25,6 +31,10 @@ module.exports = {
       version: '3.4.0',
       arch: process.arch,
       baseURL: 'https://selenium-release.storage.googleapis.com'
+    },
+
+    edge: {
+      version: '15063'
     }
   }
 }
