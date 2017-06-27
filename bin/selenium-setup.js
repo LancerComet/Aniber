@@ -1,12 +1,12 @@
-/*
- *  Selenium Setup By LancerComet at 1:01, 2016/7/17.
- *  # Carry Your World #
- *  ---
- *  Selenium 安装配置.
+/**
+ * Run this script to install selenium.
+ * You must run this at least once to use Aniber.
+ *
+ * Checkout Readme.md for more detail.
  */
 
 const selenium = require('selenium-standalone')
-const seleniumConfig = require('./selenium-conf.js')
+const seleniumConfig = require('../config/selenium')
 const ora = require('ora')
 
 const spinner = ora('Installing...').start()

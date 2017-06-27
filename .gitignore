@@ -45,3 +45,6 @@ jspm_packages
 
 # Reports folder.
 reports/
+
+# Test cases.
+tests/

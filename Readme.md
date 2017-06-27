@@ -6,7 +6,7 @@
 is an e2e testing tool presets powered by Selenium and Nightwatch.
 It's standalone and you can test anything you want to any site.
 
-![](https://raw.githubusercontent.com/LancerComet/Aniber/develop/preview.gif)
+![](https://raw.githubusercontent.com/LancerComet/Aniber/master/preview.gif)
 
 
 ## Get started
@@ -27,64 +27,35 @@ It's standalone and you can test anything you want to any site.
 
   Here is an example.
   ```
-  const accountConfig = {
-      username: 'username',
-      password: 'password',
-      uid: 10000
-  }
   module.exports = {
-      'Bilibili Live Login Test': function (client) {
-        client.url('http://live.bilibili.com').maximizeWindow()
+    'Find the answer.': function (client) {
+      /*
+       * In this case, we will open bing.com and search "what is microsoft" and take a screenshot to save our answers.
+       */
 
-        // Page Init.
-        client.expect.element('body').to.be.present.before(3000)
-        client.expect.element('.top-nav-login-btn.last').to.be.visible
+      const searchInput = '#sb_form_q'
+      const searchBtn = '#sb_form_go'
+      const question = 'what is microsoft'
 
-        // Login.
-        client.click('.top-nav-login-btn.last')
-        client.waitForElementVisible('#bilibili-quick-login', 2000)
-        client.frame(0)
-        client.pause(2000)
-        client.setValue('#login-username', accountConfig.username)
-        client.setValue('#login-passwd', accountConfig.password)
-        client.click('#login-submit')
+      // Launch browser and open bing.com.
+      client.url('http://bing.com').maximizeWindow()
 
-        // Wait and check page has been reloaded.
-        client.frameParent()
-        client.pause(3000)
-        client.expect.element('body').to.be.present.before(3000)
+      // Make sure both "body" and search input are available.
+      client.expect.element('body').to.be.present
+      client.expect.element(searchInput).to.be.visible
+      client.pause(2000)  // Just wait 2s.
 
-        // Check cookies to ensure we are signed in.
-        client.getCookies(function (result) {
-          result.value.forEach((value, index, array) => {
-            if (value.name === 'DedeUserID') client.assert.equal(parseInt(value.value, 10), accountConfig.uid)
-          })
-        })
+      // Type "what is microsoft" in searching input and submit.
+      client.setValue(searchInput, question)
+      client.click(searchBtn)
+      client.pause(2000)
 
-        // Move to User Avatar.
-        client.expect.element('.user-avatar-link').to.be.visible
-        client.moveToElement('.user-avatar-link', 5, 5)
-        client.pause(500)
-        client.expect.element('#top-nav-user-panel').to.be.visible
-
-        // Logout.
-        client.click('#top-nav-logout-link')
-        client.pause(5000)
-        client.expect.element('body').to.be.present.before(3000)
-
-        // Check cookies to make sure we are off.
-        client.getCookies(function (result) {
-          var logout = true
-          result.value.forEach((value, index, array) => {
-            if (value.name === 'LIVE_LOGIN_DATA') logout = false
-          })
-          client.assert.equal(logout, true)
-        })
-
-        client.pause(1000)
-        client.end()
-      }
+      // Let's save these answers to a screenshot.
+      client.expect.element('body').to.be.present
+      client.saveScreenshot('reports/answers.png')  // Take a screenshot and save to "reports/answer.png".
+      client.end()
     }
+  }
   ```
 
 ### Run your test.

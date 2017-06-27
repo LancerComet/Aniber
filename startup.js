@@ -1,7 +1,9 @@
-/*
- *  Nightwatch Runner By LancerComet at 0:50, 2016/7/17.
- *  # Carry Your World #
- *  ---
- *  Nightwatch Runner 启动文件.
+/**
+ * Aniber is an interface e2e testing toolkit.
+ * By LancerComet.
+ * # Carry Your World #
+ *
+ * @author LancerComet
+ * @license MIMT
  */
 require('nightwatch/bin/runner.js')

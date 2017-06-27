@@ -10,8 +10,8 @@
     "chrome": "node ./startup.js --chrome",
     "phantomjs": "node ./startup.js --phantomjs",
     "lint": "eslint .",
-    "selenium-setup": "node ./build/selenium-setup.js",
-    "selenium-start": "node ./build/selenium-start.js"
+    "selenium-setup": "node ./bin/selenium-setup.js",
+    "selenium-start": "node ./bin/selenium-start.js"
   },
   "keywords": [
     "e2e",

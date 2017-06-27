@@ -1,4 +1,5 @@
 {
+  "default_browser": "phantomjs",
   "src_folders" : ["tests"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
@@ -28,6 +29,7 @@
         "enabled" : false,
         "path" : ""
       },
+
       "desiredCapabilities": {
         "browserName": "",
         "javascriptEnabled": true,
