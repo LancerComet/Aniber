@@ -65,6 +65,7 @@ If you want use a different browser, see the commands below.
 ## NPM Scripts
  - `npm start`: Run all testing cases by using default settings. It will use **Phantomjs** to run testing cases.
  - `npm run ie`: Run all testing cases by using **Internet Explorer**. You might do some extra work. Check these stuff below.
+ - `npm run edge`: Run all testing cases by using **Microsoft Edge**. Make sure you are using Windows 10.
  - `npm run firefox`: Run all testing cases by using **Firefox**. Make sure Firefox has been installed.
  - `npm run chrome`: Run all testing case by using **Chrome**. Make sure Chrome has been installed.
  - `npm run selenium-setup`: Install Selenium to your project.
