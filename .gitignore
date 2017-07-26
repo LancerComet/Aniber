@@ -48,3 +48,6 @@ reports/
 
 # Test cases.
 tests/
+
+# local.
+local/
